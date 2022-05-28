@@ -12,7 +12,7 @@
 }
 body{
     background-color: black;
-    
+    overflow: hidden;
 }
 header{
     display: flex;
@@ -64,16 +64,15 @@ main{
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    user-select: none;
 }
 .navbar {
     width: 10%;
     height: 750px;
  }
 .list-nav{
-    position: relative;
-    top: 50%;
     list-style: none;
-    transform: rotate(90deg); /*translateX(-100%); */
+    transform: rotate(90deg) translateX(200%);
     display: flex;
     justify-content: center;
 }
@@ -98,6 +97,76 @@ main{
 .blure{
     filter: blur(80px);
 }
+
+.inform-block{
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    height: 450px;
+    z-index: 2;
+    background-color: rgb(19, 19, 19);
+    border-radius: 20px;
+    opacity: 0;
+    padding: 30px;
+    line-height: 35px;
+    box-shadow: 20px 20px 20px #e4003595;
+    transition: all 1s ease-in-out;
+}
+.projects-block{
+    top: 10%;
+    left: 50%;
+}
+#about-h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+.active{
+    display:block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: .98;
+}
+/* Слайдер */
+.next-btn, .back-btn{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+}
+.next-btn{
+    right: 20px;
+}
+.back-btn{
+    left: 20px;
+}
+.slider{
+    width: 600px;
+    height: 340px;
+    border: 1px solid white;
+    margin: auto auto;
+    overflow: hidden;
+}
+.slider-line{
+    position: relative;
+    width: 2400px;
+    height: inherit;
+    background-color: red;
+    display: flex;
+    transition: all 1s ease;
+}
+.project{
+    width: 600px;
+    height: 340px;
+    display: inline-block;
+    background-color: greenyellow;
+}
+
+
+/* Конец слайдер */
 footer{
     position: fixed;
     width: 100%;
@@ -114,7 +183,7 @@ footer{
     font-size: 30px;
     line-height: 45px;
 }
-.from{
+.from-text{
     font-weight: 500;
     font-size: 26px;
     line-height: 39px;
