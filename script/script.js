@@ -31,3 +31,26 @@ document.querySelector(".next-btn").onclick = () =>{
     offset < -1800 ? offset = 0: false;
     sliderLine.style.left = offset + 'px';
 }
+//Карточки проектов
+let project = document.querySelectorAll(".project");
+let projectCard = document.querySelectorAll(".project-card");
+let count = 0;
+ console.log(projectCard.length);
+
+for(let i = 0; i < projectCard.length; i++){
+
+    projectCard[i].addEventListener("click", function() {
+        let frontCard = document.querySelectorAll(".front-card");
+        let backCard =document.querySelectorAll(".back-card");
+        if(count == 0){
+            frontCard[i].style.transform = "rotateY(180deg)";
+            backCard[i].style.transform = "rotateY(360deg)";
+            count++;
+        }
+        else if(count == 1){
+            frontCard[i].style.transform = "rotateY(0)";
+            backCard[i].style.transform = "rotateY(180deg)";
+            count--;
+        }
+    });
+}

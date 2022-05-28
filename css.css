@@ -146,25 +146,53 @@ main{
 .slider{
     width: 600px;
     height: 340px;
-    border: 1px solid white;
     margin: auto auto;
     overflow: hidden;
+    
 }
 .slider-line{
     position: relative;
     width: 2400px;
     height: inherit;
-    background-color: red;
     display: flex;
     transition: all 1s ease;
 }
 .project{
     width: 600px;
     height: 340px;
-    display: inline-block;
-    background-color: greenyellow;
-}
 
+
+}
+.project-card{ 
+    position: relative;
+    width: 580px;
+    height: 320px;
+    border-radius: 20px;
+    margin: 10px auto;
+    cursor: pointer;
+    perspective: 3000px;
+}
+.front-card, .back-card{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    background: yellow;
+    transition: all 1s ease-in-out;
+    border-radius: 20px;
+}
+.back-card{
+    transform: rotateY(180deg);
+    background: red;
+}
+/* .project-card:active .back-card{
+    transform: rotateY(360deg);
+}
+.project-card:active .front-card{
+    transform: rotateY(180deg);
+} */
 
 /* Конец слайдер */
 footer{
