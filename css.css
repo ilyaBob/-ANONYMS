@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+.text-red{
+    color: #FF2B51;
+}
+.text-white{
+    color: #FFFFFF;
+}
+body{
+    background-color: black;
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px 0 0;
+}
+.logo{
+    display: flex;
+    width: 400px;
+    height: 140px;
+    align-items: center;
+}
+.logo-img{
+    width: 200px;
+    height: 140px;
+    background: url(./images/image\ 2.png);
+}
+.text-logo{
+    width: 130px;
+    height: 61px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: .2em;
+}
+.text-fio-name, .text-fio-surname {
+    display: block;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: right;
+}
+.text-fio-name{
+    font-weight: normal;
+}
+.text-fio-surname{
+    font-weight: 600;
+}
+/* Конец шапки */
+main{
+    display: flex;
+}
+.contain{
+    width: 90%;
+}
+.man{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.navbar {
+    width: 10%;
+    height: 750px;
+ }
+.list-nav{
+    position: relative;
+    top: 50%;
+    list-style: none;
+    transform: rotate(90deg); /*translateX(-100%); */
+    display: flex;
+    justify-content: center;
+}
+.list-nav li{
+    margin-right: 100px;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: .1em;
+}
+.sircle{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 37px solid #E40037;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 100px;
+    left: 52%;
+    transform: translateX(-50%);
+}
+.blure{
+    filter: blur(80px);
+}
+footer{
+    position: fixed;
+    width: 100%;
+    height: 160px;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    align-items: flex-end;
+}
+.web-designer{
+    display: block;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+}
+.from{
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    color: #c0c0c0;
+    letter-spacing: .1em;
+}
+.text-in{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: .02em;
+}
+.footer-work{
+    padding-left: 50px;
+}
+.soc-button{
+    padding-right: 40px;
+    cursor: pointer;
+}
