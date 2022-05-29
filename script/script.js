@@ -1,22 +1,26 @@
-let about = document.querySelector(".about");
-let projects = document.querySelector(".projects");
+let navm = document.querySelectorAll(".navm");
+let informBlock = document.querySelectorAll(".inform-block");
+let overlay = document.querySelector(".overlay");
 
-let aboutBlock = document.querySelector(".about-block");
-let projectsBlock = document.querySelector(".projects-block");
-
-function clear (){
-    aboutBlock.classList.remove("active");
-    projectsBlock.classList.remove("active");
+//Открытие вкладок
+clear =()=>{
+    for(let i = 0; i<informBlock.length; i++){
+        informBlock[i].classList.remove("active");
+    }
 }
-about.onclick = () => {
-    clear();
-    aboutBlock.classList.add("active");  
+overlay.addEventListener('click',function(){
+    for(let i = 0; i<informBlock.length; i++){
+        informBlock[i].classList.remove("active");
+        overlay.style.display = "none";
+    }
+})
+for(let i = 0; i<informBlock.length; i++){
+    navm[i].onclick = () => {
+        clear();
+        overlay.style.display = "block";
+        informBlock[i].classList.add("active");  
+    }
 }
-projects.onclick = () => {
-    clear();
-    projectsBlock.classList.add("active");
-}
-
 // Слайдер
 let offset = 0;
 let sliderLine = document.querySelector(".slider-line");
@@ -25,6 +29,7 @@ document.querySelector(".back-btn").onclick = () =>{
     offset += 600;
     offset > 0 ? offset = -1800: false;
     sliderLine.style.left = offset + 'px';
+    
 }
 document.querySelector(".next-btn").onclick = () =>{
     offset -= 600;
@@ -35,7 +40,6 @@ document.querySelector(".next-btn").onclick = () =>{
 let project = document.querySelectorAll(".project");
 let projectCard = document.querySelectorAll(".project-card");
 let count = 0;
- console.log(projectCard.length);
 
 for(let i = 0; i < projectCard.length; i++){
 
