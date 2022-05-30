@@ -42,7 +42,6 @@ header{
 .logo-img{
     width: 200px;
     height: 140px;
-    background: url(./images/image\ 2.png);
 }
 .text-logo{
     width: 130px;
@@ -65,9 +64,6 @@ header{
     font-weight: 600;
 }
 /* Конец шапки */
-main{
-    display: flex;
-}
 .contain{
     width: 90%;
 }
@@ -80,8 +76,12 @@ main{
     user-select: none;
 }
 .navbar {
+    position: absolute;
+    top: 50%;
+    right: -93px;
+    transform: translate(-50%, -50%);
     width: 10%;
-    height: 750px;
+    height: 640px;
     z-index: 10;
  }
 .list-nav{
@@ -259,4 +259,162 @@ footer{
 .soc-button{
     padding-right: 40px;
     cursor: pointer;
+}
+.cross{
+    display: none;
+}
+@media ( max-width: 1600px) {
+    .navbar{
+        right: -40px;
+        height: 521px;
+    }
+}
+@media ( max-width: 420px) {
+    header{
+        padding: 0;
+    }
+    .logo{
+        position: relative;
+        left: -60px;
+    }
+    #nav-menu-btn{
+        display: block;
+        position: absolute;
+        right: 5%;
+        top: 5%;
+    }
+    .fio{
+        display: none;
+    }
+    .navbar{
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform:translate(-50%,-50%);
+        height: 10%;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+    .list-nav{
+        transform: rotate(0deg);
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .list-nav li{
+        margin: 0 10px 10px 10px;
+    }
+    footer{
+        display: none;
+    }
+    .man{
+        position: fixed;
+        bottom: -118px;
+        left: 25%;
+        transform: translateX(-45%) scale(0.7);
+    }
+    .sircle{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform:translate(-50%) scale(.5);
+        display: none;
+    }
+    .inform-block{
+        top: 60%;
+        max-width: 300px;
+        min-height: 200px;
+        display: none;
+        padding: 15px;
+    }
+    #about-h2{
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+    .inform-block p{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .active{
+        display: block;
+    }
+    .cross{
+        display: block;
+        position: absolute;
+    }
+    .cross-top{
+        top: 10%;
+        left: -13%;
+        transform: scale(.6) rotate(21deg);
+    }
+    .cross-bot{
+        top: 46%;
+        left: 0%;
+        transform: scale(.93) rotate(78deg);
+    }
+    .projects-block{
+        overflow: hidden;
+    }
+    .project{
+        position: relative;
+        left: -164px;
+        top: -76px;
+        transform: scale(.5);
+    }
+    .back-card{
+        height: 540px;
+    }
+    .back-card span{
+        font-size: 40px;
+        line-height: 40px;
+        transform: scale(1);
+    }
+    .back-card p{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .back-card a{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .next-btn img{
+        position: absolute;
+        bottom: -213px;
+        right: 0;
+        transform: scale(.8);
+    }
+    .back-btn img{
+        position: absolute;
+        bottom: -213px;
+        transform: scale(.8);
+    }
+    main{
+        max-width: 420px;
+        height: 100vh;
+        margin: 0 auto;
+    }
+    body{
+        width: 100%;
+    }
+}   
+@media (max-width: 375px) {
+    .inform-block{
+        top: 65%;
+        left: 55%;
+    }
+    .navbar{
+        left: 55%;
+        top: 23%;
+    }
+}
+@media (max-width: 320px) {
+    .inform-block{
+        top: 85%;
+        left: 72%;
+    }
+    .navbar{
+        left: 75%;
+        top: 23%;
+        }
 }
