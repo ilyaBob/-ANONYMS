@@ -36,6 +36,55 @@ document.querySelector(".next-btn").onclick = () =>{
     offset < -1800 ? offset = 0: false;
     sliderLine.style.left = offset + 'px';
 }
+
+
+
+
+sliderLine.addEventListener("touchstart", oneTouch);
+sliderLine.addEventListener('touchmove', moveTouch);
+var xDown = null;
+var yDown = null;
+
+
+function moveTouch(event){
+}
+function oneTouch (event) {
+    let firstTouch = getTouches(event)[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
+}
+function getTouches(evt) {
+    return evt.touches;
+}
+function moveTouch(evt) {
+    if ( ! xDown ) {
+    return;
+    }
+     
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+     
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) { //отлавливаем разницу в движении
+    if ( xDiff > 0 ) {
+        offset -= 600;
+        offset < -1800 ? offset = 0: false;
+        sliderLine.style.left = offset + 'px';
+    } 
+    else {
+        offset += 600;
+        offset > 0 ? offset = -1800: false;
+        sliderLine.style.left = offset + 'px';
+    }
+    // свайп был, обнуляем координаты
+    xDown = null;
+    yDown = null;
+    };
+}
+
+
 //Карточки проектов
 let project = document.querySelectorAll(".project");
 let projectCard = document.querySelectorAll(".project-card");

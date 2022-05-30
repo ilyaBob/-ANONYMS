@@ -12,6 +12,7 @@
 }
 a{
     color: #FF2B51;
+    text-decoration: none;
 }
 .overlay{
     width: 100%;
@@ -259,6 +260,7 @@ footer{
 .soc-button{
     padding-right: 40px;
     cursor: pointer;
+    z-index: 2;
 }
 .cross{
     display: none;
@@ -267,6 +269,48 @@ footer{
     .navbar{
         right: -40px;
         height: 521px;
+    }
+}
+@media(max-width: 1300px){
+    .navbar{
+        right: -40px;
+        height: 430px;
+    }
+    .list-nav li {
+        margin-right: 50px;
+    }
+    .inform-block{
+        max-width: 700px;
+    }
+}
+@media(max-width: 900px){
+    .navbar{
+        right: 0px;
+        height: 301px;
+    }
+    .list-nav li {
+        margin-right: 50px;
+    }
+    .inform-block{
+        max-width: 700px;
+        transform: scale(.7)translate(-70%,-70%);
+    }
+    .sircle{
+        display: none;
+    }
+    .cross{
+        display: block;
+        position: absolute;
+    }
+    .cross-top{
+        top: 10%;
+        left: -13%;
+        transform: scale(.6) rotate(21deg);
+    }
+    .cross-bot{
+        top: 46%;
+        left: 15%;
+        transform: scale(.93) rotate(78deg);
     }
 }
 @media ( max-width: 420px) {
@@ -322,11 +366,13 @@ footer{
         display: none;
     }
     .inform-block{
-        top: 60%;
+        top: 55%;
         max-width: 300px;
         min-height: 200px;
         display: none;
         padding: 15px;
+        transform: scale(1) translate(-50%,-50%);
+
     }
     #about-h2{
         font-size: 22px;
